@@ -10,10 +10,12 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 //import AppRoutes from "./routes/AppRoutes.jsx";
 import AppRoutes from './routes/AppRoutesV2.jsx';
+//Importações para o calendário
 import ptBR from 'antd/es/locale/pt_BR';
 import dayjs from 'dayjs';
 import 'dayjs/locale/pt-br';
 dayjs.locale('pt-br');
+//ConfigProvider - define padrões de componentes
 import { ConfigProvider } from 'antd';
 
 function App() {

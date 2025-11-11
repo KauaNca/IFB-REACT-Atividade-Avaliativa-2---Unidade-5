@@ -53,6 +53,7 @@ export default function VisualizaPessoa() {
           {tipo === 'PF' ? (
             <>
               <Descriptions.Item label="CPF">{pessoa.cpf}</Descriptions.Item>
+              {/*Adiciona a Data de Nascimento */}
               <Descriptions.Item label="Data de Nascimento">{pessoa.dataNascimento}</Descriptions.Item>
               </>
           ) : (

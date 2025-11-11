@@ -117,7 +117,7 @@ export default function PessoaFormOOV2() {
         pf.setEmail(values.email);
         pf.setCPF(values.cpf);
         pf.setEndereco(end);
-        pf.setData(values.dataNascimento.format("DD/MM/YYYY"));
+        pf.setData(values.dataNascimento.format("DD/MM/YYYY")); //método adicionado
 
         if (values.titulo) {
           const t = new Titulo();
@@ -153,7 +153,7 @@ export default function PessoaFormOOV2() {
           const dr = values.ie.dataRegistro;
           const dataRegistro =
             dr && typeof dr === 'object' && typeof dr.format === 'function'
-              ? dr.format("DD/MM/YYYY")
+              ? dr.format("DD/MM/YYYY") //Arrumado
               : dr || '';
 
           ie.setDataRegistro(dataRegistro);
