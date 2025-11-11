@@ -51,6 +51,7 @@ export default class PJDAO {
             dataRegistro: ie.getDataRegistro?.(),
           }
         : {},
+        dataRegistro: ie.getDataRegistro()
     };
   }
 

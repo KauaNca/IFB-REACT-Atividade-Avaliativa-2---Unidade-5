@@ -42,9 +42,8 @@ export default function VisualizaPessoa() {
       }}
     >
       <Card
-        title={`Detalhes da ${
-          tipo === 'PF' ? 'Pessoa Física' : 'Pessoa Jurídica'
-        }`}
+        title={`Detalhes da ${tipo === 'PF' ? 'Pessoa Física' : 'Pessoa Jurídica'
+          }`}
         bordered={false}
       >
         <Descriptions bordered column={1}>
@@ -52,7 +51,7 @@ export default function VisualizaPessoa() {
           <Descriptions.Item label="E-mail">{pessoa.email}</Descriptions.Item>
 
           {tipo === 'PF' ? (
-            <Descriptions.Item label="CPF">{pessoa.cpf}</Descriptions.Item>
+              <Descriptions.Item label="CPF">{pessoa.cpf}</Descriptions.Item>
           ) : (
             <Descriptions.Item label="CNPJ">{pessoa.cnpj}</Descriptions.Item>
           )}
@@ -69,8 +68,8 @@ export default function VisualizaPessoa() {
           <Descriptions.Item label="Telefones">
             {pessoa.telefones?.length > 0
               ? pessoa.telefones
-                  .map((t) => `(${t.ddd}) ${t.numero}`)
-                  .join(' | ')
+                .map((t) => `(${t.ddd}) ${t.numero}`)
+                .join(' | ')
               : 'Não informado'}
           </Descriptions.Item>
 

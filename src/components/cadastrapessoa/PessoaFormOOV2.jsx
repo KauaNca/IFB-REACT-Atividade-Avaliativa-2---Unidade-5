@@ -57,6 +57,7 @@ export default function PessoaFormOOV2() {
           email: pessoa.email,
           endereco: pessoa.endereco || {},
           telefones: pessoa.telefones || [],
+          dataNascimento: dayjs(pessoa.dataNascimento) || null
         };
 
         if (tipoParam === 'PF') {
@@ -116,7 +117,7 @@ export default function PessoaFormOOV2() {
         pf.setEmail(values.email);
         pf.setCPF(values.cpf);
         pf.setEndereco(end);
-        pf.setData(values.dataNascimento);
+        pf.setData(values.dataNascimento.format("DD/MM/YYYY"));
 
         if (values.titulo) {
           const t = new Titulo();
@@ -152,7 +153,7 @@ export default function PessoaFormOOV2() {
           const dr = values.ie.dataRegistro;
           const dataRegistro =
             dr && typeof dr === 'object' && typeof dr.format === 'function'
-              ? dr.format('YYYY-MM-DD')
+              ? dr.format("DD/MM/YYYY")
               : dr || '';
 
           ie.setDataRegistro(dataRegistro);
@@ -215,9 +216,8 @@ export default function PessoaFormOOV2() {
         <h2 style={{ textAlign: 'center', marginBottom: 20 }}>
           {editando
             ? `Editar ${tipo === 'PF' ? 'Pessoa Física' : 'Pessoa Jurídica'}`
-            : `Cadastro de ${
-                tipo === 'PF' ? 'Pessoa Física' : 'Pessoa Jurídica'
-              }`}
+            : `Cadastro de ${tipo === 'PF' ? 'Pessoa Física' : 'Pessoa Jurídica'
+            }`}
         </h2>
 
         <Form

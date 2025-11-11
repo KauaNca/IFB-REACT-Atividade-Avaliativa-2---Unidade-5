@@ -52,7 +52,7 @@ export default class PFDAO {
             secao: titulo.getSecao?.(),
           }
         : {},
-        data: pf.getData()
+        dataNascimento: pf.getData()
     };
   }
 
