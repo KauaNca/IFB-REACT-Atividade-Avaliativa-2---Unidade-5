@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "João Silva",
+      "email": "joao@email.com",
+      "age": 28,
+      "city": "São Paulo",
+      "active": true,
+      "skills": ["JavaScript", "React", "Node.js"]
+    },
+    {
+      "id": 2,
+      "name": "Maria Santos",
+      "email": "maria@email.com",
+      "age": 32,
+      "city": "Rio de Janeiro",
+      "active": false,
+      "skills": ["Python", "Django", "SQL"]
+    },
+    {
+      "id": 3,
+      "name": "Pedro Oliveira",
+      "email": "pedro@email.com",
+      "age": 25,
+      "city": "Belo Horizonte",
+      "active": true,
+      "skills": ["Vue.js", "CSS", "HTML"]
+    },
+    {
+      "id": 4,
+      "name": "Ana Costa",
+      "email": "ana@email.com",
+      "age": 30,
+      "city": "Porto Alegre",
+      "active": true,
+      "skills": ["TypeScript", "Angular", "MongoDB"]
+    }
+  ],
+  "total": 4,
+  "company": "Tech Solutions"
+}
