@@ -6,6 +6,7 @@ export default class Pessoa {
   #email;
   #endereco;
   #telefones = [];
+  #data;
 
   setNome(nome) {
     if (nome) {
@@ -17,6 +18,13 @@ export default class Pessoa {
 
   getNome() {
     return this.#nome;
+  }
+  setData(data) {
+    this.#data = data;
+    return true;
+  }
+  getData(data) {
+    return this.#data;
   }
 
   setEmail(email) {

@@ -116,6 +116,7 @@ export default function PessoaFormOOV2() {
         pf.setEmail(values.email);
         pf.setCPF(values.cpf);
         pf.setEndereco(end);
+        pf.setData(values.dataNascimento);
 
         if (values.titulo) {
           const t = new Titulo();

@@ -10,12 +10,19 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 //import AppRoutes from "./routes/AppRoutes.jsx";
 import AppRoutes from './routes/AppRoutesV2.jsx';
+import ptBR from 'antd/es/locale/pt_BR';
+import dayjs from 'dayjs';
+import 'dayjs/locale/pt-br';
+dayjs.locale('pt-br');
+import { ConfigProvider } from 'antd';
 
 function App() {
   return (
-    <Router>
-      <AppRoutes />
-    </Router>
+    <ConfigProvider locale={ptBR}>
+      <Router>
+        <AppRoutes />
+      </Router>
+      </ConfigProvider>
   );
 }
 
