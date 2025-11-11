@@ -57,7 +57,7 @@ export default function PessoaFormOOV2() {
           email: pessoa.email,
           endereco: pessoa.endereco || {},
           telefones: pessoa.telefones || [],
-          dataNascimento: dayjs(pessoa.dataNascimento) || null
+          dataNascimento: dayjs(pessoa.dataNascimento) || null //Adicionado - Transformação
         };
 
         if (tipoParam === 'PF') {

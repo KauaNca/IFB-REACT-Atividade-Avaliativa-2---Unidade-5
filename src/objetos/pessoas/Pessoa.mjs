@@ -19,6 +19,7 @@ export default class Pessoa {
   getNome() {
     return this.#nome;
   }
+  //Métodos de Data
   setData(data) {
     this.#data = data;
     return true;
