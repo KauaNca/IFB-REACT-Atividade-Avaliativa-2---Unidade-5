@@ -261,9 +261,14 @@ export default function PessoaFormOOV2() {
             <Form.Item
               label="CPF"
               name="cpf"
-              rules={[{ required: true, message: 'Informe o CPF!' }]}
+              rules={[
+                {
+                  required:true,
+                  message: 'CPF deve conter somente números',
+                },
+              ]}
             >
-              <Input placeholder="Somente números" maxLength={11} />
+              <Input placeholder="Somente números - 00000000000" maxLength={11} inputMode="numeric" pattern="\d*"/>
             </Form.Item>
           ) : (
             <Form.Item

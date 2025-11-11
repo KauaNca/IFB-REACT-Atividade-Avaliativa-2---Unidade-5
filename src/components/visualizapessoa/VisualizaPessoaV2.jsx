@@ -17,6 +17,7 @@ export default function VisualizaPessoa() {
     // 🔹 Busca unificada pelo ID
     const encontrada = lista.find((p) => p.id === id);
     if (encontrada) setPessoa(encontrada);
+    
   }, [tipo, id]);
 
   if (!pessoa) {
@@ -29,7 +30,6 @@ export default function VisualizaPessoa() {
       </div>
     );
   }
-
   return (
     <div
       style={{
@@ -51,7 +51,10 @@ export default function VisualizaPessoa() {
           <Descriptions.Item label="E-mail">{pessoa.email}</Descriptions.Item>
 
           {tipo === 'PF' ? (
+            <>
               <Descriptions.Item label="CPF">{pessoa.cpf}</Descriptions.Item>
+              <Descriptions.Item label="Data de Nascimento">{pessoa.dataNascimento}</Descriptions.Item>
+              </>
           ) : (
             <Descriptions.Item label="CNPJ">{pessoa.cnpj}</Descriptions.Item>
           )}
