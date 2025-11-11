@@ -1,12 +1,50 @@
-# React + Vite
+🧮 Atividade Avaliativa 2 - Unidade 5
+📅 Tema: Armazenamento e gerenciamento de datas no CRUD de Pessoa Física e Jurídica
+🧾 Descrição da Atividade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O objetivo desta atividade é implementar, de forma complementar, os objetos e formulários necessários para que a Data de Nascimento (Pessoa Física) e a Data de Registro (Pessoa Jurídica) sejam corretamente armazenadas e gerenciadas no projeto, utilizando o CRUD local.
 
-Currently, two official plugins are available:
+Faz parte da avaliação a devida adaptação do código existente para o funcionamento adequado das novas propriedades, respeitando boas práticas de encapsulamento e persistência local.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📌 Data de entrega: 17/11/2025 às 11h
+📌 Critério: Após o prazo, a avaliação terá peso de 60% do total
 
-## Expanding the ESLint configuration
+🚀 Solução Proposta
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A solução desenvolvida garante o armazenamento e exibição corretos das informações de data nos formulários e nas telas de visualização, mantendo a integração com o sistema de CRUD local.
+
+Foi implementado suporte ao idioma português no componente de calendário (DatePicker do Ant Design), além de ajustes nas classes de domínio e nos arquivos de persistência.
+
+🔧 Mudanças Realizadas
+1️⃣ App.jsx
+
+🆕 Adicionadas importações de locale pt_BR e dayjs.
+
+🆕 Aplicação envolvida pelo ConfigProvider do Ant Design com o locale ptBR, garantindo o calendário e textos em português.
+
+2️⃣ Pessoa.mjs
+
+🆕 Incluídas as funções setData(data) e getData() para manipulação encapsulada da data nas classes de pessoa.
+
+3️⃣ PFDAOLocal.jsx e PJDAOLocal.jsx
+
+🆕 Adaptados os métodos de serialização e desserialização (JSON) para incluir as informações de data (dataNascimento e dataRegistro).
+
+🆕 As classes Pessoa Física (PF) e Pessoa Jurídica (PJ), herdando de Pessoa, foram ajustadas para salvar e recuperar corretamente as novas propriedades.
+
+4️⃣ PFForm.jsx e PJForm.jsx
+
+🆕 Alterado o formato dos componentes DatePicker de "YYYY-MM-DD" para "DD-MM-YYYY".
+
+🆕 Adicionadas novas regras de validação para os campos Título de Eleitor (PF) e Inscrição Estadual (PJ).
+
+5️⃣ PessoaFormOOV2.jsx
+
+🆕 Adicionado o método setData() para salvar corretamente a data informada no formulário.
+
+6️⃣ VisualizaPessoaV2.jsx
+
+🆕 Incluído o campo “Data de Nascimento” na visualização da Pessoa Física.
+
+
+Testes de CRUD realizados com sucesso, incluindo criação, atualização e visualização das datas.
